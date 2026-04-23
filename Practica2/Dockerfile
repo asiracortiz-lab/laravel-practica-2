@@ -8,7 +8,7 @@ RUN apt-get update && apt-get install -y \
 RUN docker-php-ext-install pdo_mysql mbstring exif pcntl bcmath gd
 
 # Activar mod_rewrite de Apache para las rutas de Laravel
-RUN a2dismod mpm_event && a2enmod mpm_preforkgit add .
+RUN a2dismod mpm_event && a2enmod mpm_prefork.
 
 WORKDIR /var/www/html
 COPY . .
